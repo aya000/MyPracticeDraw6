@@ -57,7 +57,8 @@ public class Sample08ObjectAnimatorView extends View {
         paint.setStrokeCap(Paint.Cap.ROUND);
         paint.setStrokeWidth(dpToPixel(15));
         arcRectF.set(centerX - radius, centerY - radius, centerX + radius, centerY + radius);
-        canvas.drawArc(arcRectF, 135, progress * 2.7f, false, paint);
+//        canvas.drawArc(arcRectF, 135, progress, false, paint);
+        canvas.drawArc(arcRectF, 135, progress * 3.6f, false, paint);
 
         paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.FILL);

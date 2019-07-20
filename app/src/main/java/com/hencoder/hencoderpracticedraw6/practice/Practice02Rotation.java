@@ -14,6 +14,10 @@ public class Practice02Rotation extends RelativeLayout {
     Button animateBt;
     ImageView imageView;
 
+    int rotateState = 0;
+    int rotateCount = 4;
+
+
     public Practice02Rotation(Context context) {
         super(context);
     }
@@ -37,6 +41,30 @@ public class Practice02Rotation extends RelativeLayout {
             @Override
             public void onClick(final View v) {
                 // // TODO 在这里处理点击事件，通过 View.animate().rotation/X/Y() 来让 View 旋转
+                switch (rotateState) {
+                    case 0:
+                        imageView.animate().rotationBy(30);
+                        break;
+
+                    case 1:
+                        imageView.animate().rotationBy(-30);
+                        break;
+
+                    case 2:
+                        imageView.animate().rotationX(30);
+                        break;
+
+                    case 3:
+                        imageView.animate().rotationY(30);
+                        break;
+
+                }
+                rotateState++;
+                if (rotateState == rotateCount) {
+                    rotateState = 0;
+                }
+
+
             }
         });
     }
